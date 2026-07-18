@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="BasedUpgradeResource" format=3 uid="uid://bbyvo7sbh42uq"]
+
+[ext_resource type="Script" uid="uid://7tcck2ijco3w" path="res://Resource/UpgradeResource.gd" id="1_vlket"]
+
+[resource]
+script = ExtResource("1_vlket")
+id = "Player_Upgrade"
+title = "Speed Boost"
+description = "yes"
+metadata/_custom_type_script = "uid://7tcck2ijco3w"

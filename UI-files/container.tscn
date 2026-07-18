@@ -1,21 +1,14 @@
 [gd_scene format=3 uid="uid://dhk03gtf5dtn5"]
 
-[ext_resource type="Script" uid="uid://bunsad70t6u0e" path="res://Sandbox/Upgrade_menu-test.gd" id="1_wgy8i"]
-[ext_resource type="Script" uid="uid://6t7o4n7lxym0" path="res://Sandbox/Upgrade_logic_test.gd" id="2_rs35d"]
-[ext_resource type="Script" uid="uid://7tcck2ijco3w" path="res://Resource/UpgradeResource.gd" id="3_rs35d"]
-[ext_resource type="Resource" uid="uid://ch1syootcy3se" path="res://Sandbox/wall_upgrade.tres" id="4_fwa0t"]
-[ext_resource type="Resource" uid="uid://bmyb6mw1unngm" path="res://Sandbox/speed_boost.tres" id="5_gqbqm"]
+[ext_resource type="Script" uid="uid://74qluxr0ynr8" path="res://Sandbox/Flat_num_uprg/Flat_num_player.gd" id="6_fwa0t"]
 
 [node name="Control" type="Control" unique_id=1784885113]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-script = ExtResource("1_wgy8i")
 
 [node name="Upgrade_manager" type="Node" parent="." unique_id=597831702]
-script = ExtResource("2_rs35d")
-upgrade_pool = Array[ExtResource("3_rs35d")]([ExtResource("4_fwa0t"), ExtResource("5_gqbqm")])
 
 [node name="Option1" type="Button" parent="." unique_id=349215585]
 layout_mode = 0
@@ -83,3 +76,7 @@ offset_right = 48.0
 grow_horizontal = 2
 grow_vertical = 0
 text = "test"
+
+[node name="Flat_player_stats" type="Node" parent="." unique_id=194117342]
+script = ExtResource("6_fwa0t")
+metadata/_custom_type_script = "uid://74qluxr0ynr8"

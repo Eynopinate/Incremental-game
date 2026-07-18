@@ -1,0 +1,33 @@
+extends Node
+class_name Flat_player_stats
+
+var Min_Value : float = 0.2
+var Max_Value : float = 0.5
+
+var Raw_roll : float 
+
+func _ready() -> void:
+    pass
+
+
+
+func _create_random_upgrade() -> BasedUpgradeResource :
+    var new_card = BasedUpgradeResource.new()
+
+    new_card.title = "player flat modifier"
+
+    var rolled_stats = Raw_Num_roller(Min_Value , Max_Value)
+
+    new_card.rolled_effects["player speed"] = rolled_stats
+
+    return new_card
+
+func Raw_Num_roller(Min_Value , Max_Value) -> float :
+
+    # rolled random value
+    Raw_roll = randf_range(Min_Value , Max_Value)
+    # make it 50/50
+    if randf() > 0.5:
+        Raw_roll = Raw_roll * -1
+    
+    return Raw_roll

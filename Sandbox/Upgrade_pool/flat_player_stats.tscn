@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://q6hsxft0l7qt"]
+
+[ext_resource type="Script" uid="uid://c6kou4b34d56t" path="res://Sandbox/Upgrade_pool/Upgrade_pool_Script.gd" id="1_06nd3"]
+[ext_resource type="Script" uid="uid://74qluxr0ynr8" path="res://Sandbox/Flat_num_uprg/Flat_num_player.gd" id="2_5kfag"]
+
+[node name="Upgrade_Pool" type="Node" unique_id=89491353 node_paths=PackedStringArray("flat_player_roller")]
+script = ExtResource("1_06nd3")
+flat_player_roller = NodePath("Flat_player_stats")
+metadata/_custom_type_script = "uid://c6kou4b34d56t"
+
+[node name="Flat_player_stats" type="Node" parent="." unique_id=517251086]
+script = ExtResource("2_5kfag")
+metadata/_custom_type_script = "uid://74qluxr0ynr8"
