@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://p6ughemau1w4"]
+
+[ext_resource type="Texture2D" uid="uid://ee7nyxthofgq" path="res://assets/basic square.png" id="1_of2ls"]
+[ext_resource type="Script" uid="uid://dmkxayoqos0iy" path="res://Wall-files/wall_scene.gd" id="1_s6lvm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h41fa"]
+size = Vector2(8, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yn66a"]
+size = Vector2(8, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bgqun"]
+size = Vector2(128, 8)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_unqc4"]
+size = Vector2(128, 8)
+
+[node name="Wall_scene" type="StaticBody2D" unique_id=346760097]
+collision_layer = 4
+script = ExtResource("1_s6lvm")
+
+[node name="Walls-sprites" type="Node2D" parent="." unique_id=921504491]
+metadata/_edit_lock_ = true
+
+[node name="BasicSquare" type="Sprite2D" parent="Walls-sprites" unique_id=1534707933]
+position = Vector2(-4.7683716e-06, -36)
+scale = Vector2(3.9999998, 0.25)
+texture = ExtResource("1_of2ls")
+metadata/_edit_lock_ = true
+
+[node name="BasicSquare2" type="Sprite2D" parent="Walls-sprites" unique_id=602377709]
+position = Vector2(0, 36)
+scale = Vector2(4, 0.25)
+texture = ExtResource("1_of2ls")
+metadata/_edit_lock_ = true
+
+[node name="BasicSquare3" type="Sprite2D" parent="Walls-sprites" unique_id=1064740788]
+position = Vector2(-68, 0)
+scale = Vector2(0.25, 2.5)
+texture = ExtResource("1_of2ls")
+metadata/_edit_lock_ = true
+
+[node name="BasicSquare4" type="Sprite2D" parent="Walls-sprites" unique_id=1236896632]
+position = Vector2(68, -1.9073486e-06)
+scale = Vector2(0.24999994, 2.5)
+texture = ExtResource("1_of2ls")
+metadata/_edit_lock_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=654200178]
+position = Vector2(68, 0)
+shape = SubResource("RectangleShape2D_h41fa")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=351320400]
+position = Vector2(-68, 0)
+shape = SubResource("RectangleShape2D_yn66a")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="." unique_id=1567772288]
+position = Vector2(0, -36)
+shape = SubResource("RectangleShape2D_bgqun")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="." unique_id=1388249183]
+position = Vector2(0, 36)
+shape = SubResource("RectangleShape2D_unqc4")

@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Wall_stats" format=3 uid="uid://bbrtnbho64cie"]
+
+[ext_resource type="Script" uid="uid://f80ac262uuna" path="res://Resource/Wall_stats.gd" id="1_stiga"]
+
+[resource]
+script = ExtResource("1_stiga")
+metadata/_custom_type_script = "uid://f80ac262uuna"

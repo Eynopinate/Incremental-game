@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Game_Data" format=3 uid="uid://ds88y2rimjwi8"]
+
+[ext_resource type="Resource" uid="uid://dqt7c1sbg6eg1" path="res://Resource/Norm_Bullets.tres" id="1_1q02x"]
+[ext_resource type="Script" uid="uid://dynm31mh350om" path="res://Resource/Game_data.gd" id="1_am7tp"]
+[ext_resource type="Resource" uid="uid://bbrtnbho64cie" path="res://Resource/Wall_stats.tres" id="2_fehfy"]
+[ext_resource type="Resource" uid="uid://cgws1ypc3d2q1" path="res://Resource/CharacterStats.tres" id="3_pgwaj"]
+
+[resource]
+script = ExtResource("1_am7tp")
+player = ExtResource("3_pgwaj")
+Norm_Bullets = ExtResource("1_1q02x")
+Wall = ExtResource("2_fehfy")
+metadata/_custom_type_script = "uid://dynm31mh350om"

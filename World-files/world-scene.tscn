@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://cfrwdw867kcch"]
+
+[ext_resource type="PackedScene" uid="uid://o8tu1eqrb4wj" path="res://Player-files/character_body_2d.tscn" id="1_qqns2"]
+[ext_resource type="Script" uid="uid://dm2cvvtro6u2p" path="res://World-files/World-scene-code.gd" id="1_xxuul"]
+[ext_resource type="PackedScene" uid="uid://cyvhi3g547c23" path="res://bullets/bullets-scene.tscn" id="2_lp0rh"]
+[ext_resource type="PackedScene" uid="uid://p6ughemau1w4" path="res://Wall-files/wall_scene.tscn" id="2_xxuul"]
+
+[node name="world" type="Node2D" unique_id=2581757]
+script = ExtResource("1_xxuul")
+stuff_to_spawn = ExtResource("2_lp0rh")
+
+[node name="CharacterBody2D" parent="." unique_id=331451852 instance=ExtResource("1_qqns2")]
+position = Vector2(323, 182)
+
+[node name="Wall_scene" parent="." unique_id=346760097 instance=ExtResource("2_xxuul")]
+position = Vector2(322, 181)
+
+[node name="Timer" type="Timer" parent="." unique_id=1616765133]
+wait_time = 3.0
+autostart = true
+
+[connection signal="Size_change" from="." to="Wall_scene" method="_on_world_size_change"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

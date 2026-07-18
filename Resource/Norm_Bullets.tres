@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="Norm_Bullets_stats" format=3 uid="uid://dqt7c1sbg6eg1"]
+
+[ext_resource type="Script" uid="uid://b0gkpuub6utrd" path="res://Resource/Norm_Bullets.gd" id="1_gwn13"]
+
+[resource]
+script = ExtResource("1_gwn13")
+metadata/_custom_type_script = "uid://b0gkpuub6utrd"
