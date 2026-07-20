@@ -7,29 +7,33 @@ extends Node
 @export var upgrades_pool : Array[BasedUpgradeResource] 
 
 
-var custom_upgrade : Array[BasedUpgradeResource]
-
 func _ready() -> void :
 	_filled_pool_if_needed()
 
 
 func _process(delta: float) -> void:
-	for card in upgrades_pool:
-		print(card.title, " -> ", card.rolled_effects)
+	pass
+	# for card in upgrades_pool:
+	# 	print(card.title, " -> Speed: ", card.Player_Speed_Mod ,  "Health: ",  card.Player_Health_Mod)
 
 
-func _filled_pool_if_needed() -> void:
+func _filled_pool_if_needed() -> Array:
+	var new_card
 	while upgrades_pool.size() < 10:
-		var new_card = flat_player_roller._create_random_upgrade()
+		var target_stats
+		if randf() > 0.5 :
+			target_stats = "Player_Speed_Mod" 
+		else :
+			target_stats = "Player_Health_Mod"
 
-		add_upgrades(new_card)
+		new_card = flat_player_roller._create_random_upgrade(target_stats) # take the new_card
+
+		add_upgrades(new_card) # append the upgrade into the pool.
+	print("Pool is fully filled.")
+	
+	return new_card
+	
 
 
-# append the upgrade into the pool.
-func add_upgrades (UpgradeStrategy : BasedUpgradeResource) -> void :
-
-	# check the size of the pool.
-	if upgrades_pool.size() < 10:
+func add_upgrades (UpgradeStrategy : BasedUpgradeResource ) -> void :
 		upgrades_pool.append(UpgradeStrategy)
-	else :
-		print("Pool is full")

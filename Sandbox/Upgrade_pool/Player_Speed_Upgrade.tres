@@ -6,5 +6,4 @@
 script = ExtResource("1_vlket")
 id = "Player_Upgrade"
 title = "Speed Boost"
-description = "yes"
 metadata/_custom_type_script = "uid://7tcck2ijco3w"

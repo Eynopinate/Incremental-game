@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://dhk03gtf5dtn5"]
 
+[ext_resource type="Script" uid="uid://bfajwip5oowi1" path="res://UI-files/UI.gd" id="1_7hsdl"]
+[ext_resource type="Script" uid="uid://c6kou4b34d56t" path="res://Sandbox/Upgrade_pool/Upgrade_pool_Script.gd" id="2_5uvd1"]
 [ext_resource type="Script" uid="uid://74qluxr0ynr8" path="res://Sandbox/Flat_num_uprg/Flat_num_player.gd" id="6_fwa0t"]
 
 [node name="Control" type="Control" unique_id=1784885113]
@@ -7,8 +9,7 @@ layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
-
-[node name="Upgrade_manager" type="Node" parent="." unique_id=597831702]
+script = ExtResource("1_7hsdl")
 
 [node name="Option1" type="Button" parent="." unique_id=349215585]
 layout_mode = 0
@@ -77,6 +78,11 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "test"
 
-[node name="Flat_player_stats" type="Node" parent="." unique_id=194117342]
+[node name="Upgrade_Pool" type="Node" parent="." unique_id=945657670 node_paths=PackedStringArray("flat_player_roller")]
+script = ExtResource("2_5uvd1")
+flat_player_roller = NodePath("Flat_player_stats")
+metadata/_custom_type_script = "uid://c6kou4b34d56t"
+
+[node name="Flat_player_stats" type="Node" parent="Upgrade_Pool" unique_id=2077674080]
 script = ExtResource("6_fwa0t")
 metadata/_custom_type_script = "uid://74qluxr0ynr8"

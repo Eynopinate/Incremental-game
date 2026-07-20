@@ -8,4 +8,16 @@ class_name BasedUpgradeResource
 
 @export var is_active : bool = false
 
-var rolled_effects : Dictionary = {}
+
+# Player stats 
+@export var Player_Speed_Mod : float 
+@export var Player_Health_Mod : float
+
+# Enemy stats
+@export var Enemy_Speed_Mod : float
+@export var Enemy_Spawnrate_Mod : float 
+
+# Wall stats
+@export var Wall_Size_Mod : float
+@export var Can_Block_Mod : bool = false
+@export var Wall_Blocking_Chance : float 
