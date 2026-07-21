@@ -24,7 +24,6 @@ func _create_random_upgrade(target_stat: String) -> BasedUpgradeResource :
 		new_card.id = "Player_Upgrade"
 
 	var rolled_stats = Raw_Num_roller(Min_Value , Max_Value)
-
 	new_card.set(target_stat , rolled_stats)
 
 	return new_card

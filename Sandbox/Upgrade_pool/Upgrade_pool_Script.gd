@@ -4,17 +4,8 @@ extends Node
 
 @export var flat_player_roller : Flat_player_stats
 
-@export var upgrades_pool : Array[BasedUpgradeResource] 
+@export var upgrades_pool : Array[BasedUpgradeResource] = [] # = [] : create the array now ! even if it's empty
 
-
-func _ready() -> void :
-	_filled_pool_if_needed()
-
-
-func _process(delta: float) -> void:
-	pass
-	# for card in upgrades_pool:
-	# 	print(card.title, " -> Speed: ", card.Player_Speed_Mod ,  "Health: ",  card.Player_Health_Mod)
 
 
 func _filled_pool_if_needed() -> Array:
@@ -28,12 +19,11 @@ func _filled_pool_if_needed() -> Array:
 
 		new_card = flat_player_roller._create_random_upgrade(target_stats) # take the new_card
 
-		add_upgrades(new_card) # append the upgrade into the pool.
+		upgrades_pool.append(new_card) # append the upgrade into the pool.
+	
+
 	print("Pool is fully filled.")
+	return upgrades_pool
 	
-	return new_card
 	
 
-
-func add_upgrades (UpgradeStrategy : BasedUpgradeResource ) -> void :
-		upgrades_pool.append(UpgradeStrategy)
